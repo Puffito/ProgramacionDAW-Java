@@ -5,58 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5b727ebd-60fc-40a4-8592-559ce818c35e" name="Changes" comment="Commit inicial del proyecto">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/.name" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/ProyectoInicialJava.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Extras/EntradaJava.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Extras/EntradaJava2.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Extras/Quiz.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/Alumno.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/Biblioteca.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/Botones.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/CajaFuerte.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/CalculatorBox.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/Calificaciones.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/Camion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/ConsumoCamion.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/DobleTriple.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/Empleado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/Libro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/MaxMinPositivos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/MaxMinPrimos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/NominaEmpleado.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/Ordenador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/PagoOrdenador.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/PrimeraClase.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/Primos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/PromediosAlumnos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/Pruebas.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/Reloj.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/Seguro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/SeguroCoche.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD2/Ver.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD3/Alumno.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD3/ArrayConMenu.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD3/ArrayFill.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD3/ArraySplit.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD3/ArraySumaPositivoNegativo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD3/BuscaElTesoro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD3/Concatenar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD3/CuentaVocales.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD3/JuegoAzar.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD3/Matriz25.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD3/MetodosAleatorios.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD3/NotasAlumnos.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD3/NumerosAleatorios.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD3/Palindromo.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD3/PasarArrayAOtro.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/UD3/RandomGen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/UD3/TresEnRaya.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UD3/BuscaElTesoro.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UD3/BuscaElTesoro.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/UD3/NotasAlumnos.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/UD3/NotasAlumnos.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -88,11 +40,11 @@
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;E:/IntelliJ/ProyectoInicialJava&quot;,
+    &quot;last_opened_file_path&quot;: &quot;E:/IntelliJ/PruebasJava&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;Console&quot;
   }
 }</component>
-  <component name="RunManager" selected="Application.ArraySumaPositivoNegativo">
+  <component name="RunManager">
     <configuration name="ArraySumaPositivoNegativo" type="Application" factoryName="Application" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="UD3.ArraySumaPositivoNegativo" />
       <module name="ProyectoInicialJava" />
@@ -184,6 +136,14 @@
       <option name="presentableId" value="Default" />
       <updated>1665511987374</updated>
     </task>
+    <task id="LOCAL-00001" summary="Commit inicial del proyecto">
+      <created>1674592810180</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1674592810180</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">

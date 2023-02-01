@@ -7,7 +7,6 @@ import java.util.Arrays;
 import java.util.Random;
 
 public class BuscaElTesoro {
-
     public static void main(String[] args) throws IOException {
 
         char[][] tableroReal = crearTablero(4, 5);
@@ -48,11 +47,10 @@ public class BuscaElTesoro {
             System.out.println(Arrays.toString(linea));
         }
     }
-
     private static void detectarMina(char[][] tableroReal, int fila, int columna) {
         for (int i = -1; i <= 1; i++) {
             for (int j = -1; j <= 1; j++) {
-                if(((fila+i >=0)&&(fila+i<tableroReal.length))&&((columna+j >=0)&&(columna+j<tableroReal[0].length))) {
+                if (((fila + i >= 0) && (fila + i < tableroReal.length)) && ((columna + j >= 0) && (columna + j < tableroReal[0].length))) {
                     if (tableroReal[fila + i][columna + j] == '*') {
                         System.out.println("¡Cuidado con la mina!");
                     }
@@ -60,7 +58,6 @@ public class BuscaElTesoro {
             }
         }
     }
-
     public static char[][] crearTablero(int fila, int columna) {
         Random r = new Random();
         char[][] tablero = new char[fila][columna];
@@ -77,4 +74,3 @@ public class BuscaElTesoro {
         return tablero;
     }
 }
-

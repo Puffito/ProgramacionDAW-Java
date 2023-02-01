@@ -29,7 +29,7 @@ public class NotasAlumnos {
                     3. Borrar nota
                     4. Estadísticas
                     5. Ver suspendidos
-                    6. Salir
+                    0. Salir
                     """);
 
             switch (br.readLine()) {
@@ -38,7 +38,7 @@ public class NotasAlumnos {
                 case ("3") -> borrarNota();
                 case ("4") -> estadistica();
                 case ("5") -> verSuspensos();
-                case ("6") -> salir = true;
+                case ("0") -> salir = true;
                 default -> System.out.println("Opción Incorrecta");
             }
         }
