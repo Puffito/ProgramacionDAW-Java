@@ -1,16 +1,17 @@
-package UD4.Entregable;
+package UD4;
 
-public class Loro extends Aves {
+public class Loro extends Aves{
     private String origen;
     private boolean habla;
 
-    public String habla() {
-        return saluda();
+    @Override
+    void habla() {
+
     }
 
 
-    private String saluda(){
-        return "Muy buenas señores";
+    public void saluda(){
+
     }
     public void volar(){
 

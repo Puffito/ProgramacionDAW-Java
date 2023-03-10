@@ -1,16 +1,12 @@
-package UD4.Entregable;
+package UD4;
 
-import java.util.ArrayList;
+import Extras.Testeo.Animal;
 
-public class Perro extends Animal {
+public class Perro extends Mascotas{
     private String raza;
     private boolean pulgas;
 
-    private ArrayList<Cita> historial = new ArrayList<>();
-
-    public String habla(){
-        return "Guau";
-    }
+    public void habla(){}
 
     public Perro(String nombre, String estado, int edad, String fechaNacimiento, String raza, boolean pulgas) {
         super(nombre, estado, edad, fechaNacimiento);
@@ -38,5 +34,4 @@ public class Perro extends Animal {
     public String toString() {
         return (super.toString()+ ", Raza:"+ this.getRaza() + ", Pulgas: " + this.isPulgas());
     }
-
 }

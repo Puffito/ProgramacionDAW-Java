@@ -1,8 +1,6 @@
-package UD4.Entregable;
+package UD4;
 
-import java.util.Date;
-
-public abstract class Mascotas {
+public abstract class Mascotas implements OrdenarMascotas {
     private String nombre, estado;
     private int edad;
     private String fechaNacimiento;
@@ -11,7 +9,7 @@ public abstract class Mascotas {
     abstract void habla();
 
     public String muestra(){
-        return(this.getClass()+ " " + this.getNombre());
+        return(this.getClass().getSimpleName()+ " " + this.getNombre());
     }
     public Mascotas(String nombre, String estado, int edad, String fechaNacimiento) {
         this.nombre = nombre;
@@ -55,5 +53,10 @@ public abstract class Mascotas {
     @Override
     public String toString() {
         return ("Nombre: "+this.nombre+", Edad: "+this.edad+", Estado: "+this.estado+", Fecha de Nacimiento: "+this.fechaNacimiento);
+    }
+
+    @Override
+    public int compareTo(Mascotas o) {
+        return this.getNombre().compareToIgnoreCase(o.getNombre());
     }
 }

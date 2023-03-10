@@ -1,13 +1,11 @@
-package UD4.Entregable;
+package UD4;
 
-public class Gato extends Animal {
+public class Gato extends Mascotas{
     private String color;
     private boolean peloLargo;
 
 
-    public String habla(){
-        return "Miau";
-    }
+    public void habla(){}
 
     public Gato(String nombre, String estado, int edad, String fechaNacimiento, String color, boolean peloLargo) {
         super(nombre, estado, edad, fechaNacimiento);

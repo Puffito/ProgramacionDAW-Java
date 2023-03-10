@@ -1,6 +1,6 @@
-package UD4.Entregable;
+package UD4;
 
-public abstract class Aves extends Animal {
+public abstract class Aves extends Mascotas {
     private String pico;
     private boolean vuela;
 

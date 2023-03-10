@@ -1,16 +1,25 @@
-package UD4.Entregable;
-import java.io.IOException;
-import java.util.ArrayList;
+package UD4;
 
-public class Inventario implements InterfazTeclado {
-    static private ArrayList<Animal> inventario = new ArrayList<>();
+import Extras.Testeo.Animal;
+
+import java.io.BufferedReader;
+import java.io.IOException;
+import java.io.InputStreamReader;
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Comparator;
+import java.util.List;
+
+public class Inventario {
+    static private ArrayList<Mascotas> inventario = new ArrayList<>();
+    static BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
 
     public static void main(String[] args) throws IOException {
-        menuInventario();
+        menuInventario(inventario);
         System.out.println("Gracias por usar el programa!");
     }
 
-    public static void menuInventario() throws IOException {
+    public static void menuInventario(ArrayList<Mascotas> inventario) throws IOException {
 
         boolean salir = false;
         while(!salir) {
@@ -39,14 +48,14 @@ public class Inventario implements InterfazTeclado {
     }
 
     public static void mostarLista(){
-        for (Animal help : inventario) {
+        for (Mascotas help : inventario) {
             System.out.println(help.muestra());
         }
     }
     public static void mostarAnimal() throws IOException {
         System.out.println("Introduce el nombre del animal");
         String nombre  = br.readLine();
-        for (Animal help : inventario) {
+        for (Mascotas help : inventario) {
             if (help.getNombre().equalsIgnoreCase(nombre)){
                 System.out.println(help);
                 return;
@@ -56,7 +65,7 @@ public class Inventario implements InterfazTeclado {
     }
 
     public static void mostrarTodo(){
-        for (Animal help : inventario) {
+        for (Mascotas help : inventario) {
             System.out.println(help);
         }
     }
@@ -154,12 +163,12 @@ public class Inventario implements InterfazTeclado {
         inventario.add(new Canario(name,estado,edad,fechaNac,pico,vuela,color,canta));
     }
     public static void ordenarLista(){
-        inventario.sort(Animal::compareTo);
+        inventario.sort(Mascotas::compareTo);
     }
     public static void eliminarAnimal() throws IOException {
         System.out.println("Introduce el nombre del animal");
         String nombre  = br.readLine();
-        for (Animal help : inventario) {
+        for (Mascotas help : inventario) {
             if (help.getNombre().equalsIgnoreCase(nombre)){
                 inventario.remove(help);
                 return;
