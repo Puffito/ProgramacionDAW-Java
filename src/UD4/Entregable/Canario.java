@@ -8,9 +8,7 @@ public class Canario extends Aves {
     public String habla(){
         return "Peep";
     }
-    public void volar(){
-
-    }
+    public void volar(){this.setEstado("Volando");}
 
     public Canario(String nombre, String estado, int edad, String fechaNacimiento, String pico, boolean vuela, String color, boolean canta) {
         super(nombre, estado, edad, fechaNacimiento, pico, vuela);

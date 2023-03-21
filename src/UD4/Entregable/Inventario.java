@@ -5,12 +5,12 @@ import java.util.ArrayList;
 public class Inventario implements InterfazTeclado {
     static private ArrayList<Animal> inventario = new ArrayList<>();
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         menuInventario();
         System.out.println("Gracias por usar el programa!");
     }
 
-    public static void menuInventario() throws IOException {
+    public static void menuInventario() throws IOException, InterruptedException {
 
         boolean salir = false;
         while(!salir) {
@@ -35,6 +35,8 @@ public class Inventario implements InterfazTeclado {
                 case 0 -> salir = true;
                 default -> System.out.println("Opción Incorrecta");
             }
+            Thread.sleep(1000);
+            System.out.println();
         }
     }
 
@@ -90,7 +92,7 @@ public class Inventario implements InterfazTeclado {
         String fechaNac = br.readLine();
         System.out.println("Inserta la raza del perro");
         String raza = br.readLine();
-        System.out.println("Tiene pulgas el perro?");
+        System.out.println("¿Tiene pulgas el perro?");
         if (br.readLine().equalsIgnoreCase("si")){pulgas = true;}
         inventario.add(new Perro(name,estado,edad,fechaNac,raza,pulgas));
     }
@@ -107,7 +109,7 @@ public class Inventario implements InterfazTeclado {
         String fechaNac = br.readLine();
         System.out.println("Inserta el color del gato");
         String color = br.readLine();
-        System.out.println("Tiene pelo largo el gato?");
+        System.out.println("¿Tiene pelo largo el gato?");
         if (br.readLine().equalsIgnoreCase("si")){peloLargo = true;}
         inventario.add(new Gato(name,estado,edad,fechaNac,color,peloLargo));
     }
@@ -126,9 +128,9 @@ public class Inventario implements InterfazTeclado {
         String origen = br.readLine();
         System.out.println("Inserta el tipo de pico del loro");
         String pico = br.readLine();
-        System.out.println("Vuela el loro?");
+        System.out.println("¿Vuela el loro?");
         if (br.readLine().equalsIgnoreCase("si")){vuela = true;}
-        System.out.println("Habla el loro?");
+        System.out.println("¿Habla el loro?");
         if (br.readLine().equalsIgnoreCase("si")){habla = true;}
         inventario.add(new Loro(name,estado,edad,fechaNac,pico,vuela,origen,habla));
     }
@@ -147,9 +149,9 @@ public class Inventario implements InterfazTeclado {
         String color = br.readLine();
         System.out.println("Inserta el tipo de pico del canario");
         String pico = br.readLine();
-        System.out.println("Vuela el canario?");
+        System.out.println("¿Vuela el canario?");
         if (br.readLine().equalsIgnoreCase("si")){vuela = true;}
-        System.out.println("Canta el canario?");
+        System.out.println("¿Canta el canario?");
         if (br.readLine().equalsIgnoreCase("si")){canta = true;}
         inventario.add(new Canario(name,estado,edad,fechaNac,pico,vuela,color,canta));
     }

@@ -12,9 +12,7 @@ public class Loro extends Aves {
     private String saluda(){
         return "Muy buenas señores";
     }
-    public void volar(){
-
-    }
+    public void volar(){this.setEstado("Volando");}
 
     public Loro(String nombre, String estado, int edad, String fechaNacimiento, String pico, boolean vuela, String origen, boolean habla) {
         super(nombre, estado, edad, fechaNacimiento, pico, vuela);

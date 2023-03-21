@@ -5,9 +5,7 @@ public class Gato extends Animal {
     private boolean peloLargo;
 
 
-    public String habla(){
-        return "Miau";
-    }
+    public String habla(){return "Miau";}
 
     public Gato(String nombre, String estado, int edad, String fechaNacimiento, String color, boolean peloLargo) {
         super(nombre, estado, edad, fechaNacimiento);
@@ -32,6 +30,6 @@ public class Gato extends Animal {
     }
     @Override
     public String toString() {
-        return (super.toString()+ ", Color:"+ this.getColor() + ", Pelo Largo: " + this.isPeloLargo());
+        return (super.toString()+ ", Color: "+ this.getColor() + ", Pelo Largo: " + this.isPeloLargo());
     }
 }

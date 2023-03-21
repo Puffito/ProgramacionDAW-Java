@@ -1,6 +1,8 @@
 package UD4.Entregable;
 
-public class Cita {
+import java.util.Iterator;
+
+public class Cita{
     private String fecha;
     private boolean revision;
     private String vacuna;
@@ -21,5 +23,10 @@ public class Cita {
 
     public String getVacuna() {
         return vacuna;
+    }
+
+    @Override
+    public String toString() {
+        return getFecha() + " Revisión = " + isRevision()+ " Vacuna usada: " +getVacuna()+";";
     }
 }
