@@ -1,11 +1,19 @@
 package UD4.EmpleadoFijoTemporal;
 
+import java.io.IOException;
+
 public abstract class Empleado{
     private String nss;
     private String nombre;
     private String fechaNacimiento;
     private char sexo;
 
+    public Empleado(String nss, String nombre, String fechaNacimiento, char sexo){
+        this.nss = nss;
+        this.nombre = nombre;
+        this.fechaNacimiento = fechaNacimiento;
+        this.sexo = sexo;
+    }
     public String getNss() {
         return nss;
     }
@@ -38,12 +46,7 @@ public abstract class Empleado{
         this.sexo = sexo;
     }
 
-    public Empleado(String nss, String nombre, String fechaNacimiento, char sexo){
-        this.nss = nss;
-        this.nombre = nombre;
-        this.fechaNacimiento = fechaNacimiento;
-        this.sexo = sexo;
-    }
 
     abstract public Double sueldo();
+    abstract public void modificarEmpleado() throws IOException;
 }

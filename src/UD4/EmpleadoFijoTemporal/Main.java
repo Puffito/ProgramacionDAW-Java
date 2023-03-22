@@ -3,38 +3,47 @@ package UD4.EmpleadoFijoTemporal;
 import java.io.IOException;
 import java.time.LocalDate;
 import java.util.ArrayList;
+import java.util.Comparator;
 
 public class Main implements InterfazTeclado, InterfazFecha {
 
     static ArrayList<Empleado> empActivos = new ArrayList<>();
     static ArrayList<Empleado> empBaja = new ArrayList<>();
 
-    public static void main(String[] args) throws IOException {
+    public static void main(String[] args) throws IOException, InterruptedException {
         menu();
-        System.out.println("Gracias por usar el programa!");
+        System.out.println("¡Gracias por usar el programa!");
     }
 
 
-    public static void menu() throws IOException {
+    public static void menu() throws IOException, InterruptedException {
 
         while (true) {
             System.out.println("""
+
                     ¡Bienvenido a la base de datos de empleados!
                     ¿Qué desea hacer?
                     1.Insertar un nuevo empleado
                     2.Alta de ventas de un empleado temporal
                     3.Dar de baja a un empleado
+                    4.Modificar un empleado
+                    5.Visualizar empleados
+                    6.Consultar empleados temporales con buenas ventas
                     0.Salir de la aplicación
                     """);
             switch (Integer.parseInt(br.readLine())) {
                 case 1 -> nuevoEmpleado();
-                case 2 -> altaVentas();
+                case 2 -> añadirVentas();
                 case 3 -> darDeBaja();
+                case 4 -> modificarEmpleado();
+                case 5 -> visualizarEmpleados();
+                case 6 -> empTemporalesProvechosos();
                 case 0 -> {
                     return;
                 }
                 default -> System.out.println("Opción Incorrecta");
             }
+            Thread.sleep(800);
         }
     }
 
@@ -125,11 +134,11 @@ public class Main implements InterfazTeclado, InterfazFecha {
         }
     }
 
-    public static void altaVentas() throws IOException {
+    public static void añadirVentas() throws IOException {
         String nss = validarSS();
         for (Empleado empl : empActivos) {
             if (empl instanceof EmpTemporal && empl.getNss().equalsIgnoreCase(nss)) {
-                System.out.println("El empleado con número de SS:"+nss+" ha sido encontrado.");
+                System.out.println("El empleado con número de SS: "+nss+" ha sido encontrado.");
                 System.out.println("¿Desea añadir las ventas?");
                 if(br.readLine().equalsIgnoreCase("si")) {
                     ((EmpTemporal) empl).añadirVentas();
@@ -143,7 +152,7 @@ public class Main implements InterfazTeclado, InterfazFecha {
         String nss = validarSS();
         for (Empleado empl : empActivos) {
             if(empl.getNss().equalsIgnoreCase(nss)){
-                System.out.println("El empleado con número de SS:"+nss+" ha sido encontrado.");
+                System.out.println("El empleado con número de SS: "+nss+" ha sido encontrado.");
                 System.out.println("¿Desea borrar el empleado?");
                 if(br.readLine().equalsIgnoreCase("si")) {
                     System.out.println("""
@@ -163,6 +172,84 @@ public class Main implements InterfazTeclado, InterfazFecha {
                         default -> System.out.println("Opción Incorrecta");
                     }
                 }else{return;}
+            }
+        }
+    }
+    public static void modificarEmpleado() throws IOException {
+        String nss = validarSS();
+        for (Empleado empl : empActivos){
+            if(empl.getNss().equalsIgnoreCase(nss)) {
+                System.out.println("El empleado con número de SS: " + nss + " ha sido encontrado.");
+                System.out.println("El empleado es de tipo " + empl.getClass().getSimpleName().substring(3));
+                System.out.println("¿Desea modificar el empleado?");
+                if(br.readLine().equalsIgnoreCase("si")) {
+                    empl.modificarEmpleado();
+                    return;
+                }
+            }
+        }
+        System.out.println("No se ha encontrado el empleado");
+    }
+
+    public static void visualizarEmpleados() throws IOException {
+        System.out.println("""
+                            1.Listar empleados activos
+                            2.Listar todos los empleados
+                            """);
+        switch (Integer.parseInt(br.readLine())) {
+            case 1 -> {
+                listarActivos();
+            }
+            case 2 -> {
+                listarTodos();
+            }
+            default -> System.out.println("Opción Incorrecta");
+        }
+    }
+    public static void listarActivos(){
+        empActivos.sort(Comparator.comparing(Empleado::getNombre));
+        System.out.println("""
+                        Empleados
+                Nombre            Sueldo""");
+        for (Empleado empl:empActivos) {
+            System.out.println(empl.getNombre() + "         " + String.format("%.2f",empl.sueldo())+"€");
+        }
+    }
+    public static void listarTodos(){
+        empActivos.sort(Comparator.comparing(Empleado::getNombre));
+        empBaja.sort(Comparator.comparing(Empleado::getNombre));
+        System.out.println("""
+                        Empleados en Activo
+                        
+                        Empleados Temporales
+                Nombre              FechaInicio     FechaFin        Sueldo""");
+        for (Empleado empl:empActivos){
+            if(empl instanceof EmpTemporal){
+                System.out.println(empl);
+            }
+        }
+        System.out.println("""
+                         
+                         Empleados Fijos
+                Nombre          Trienios            Sueldo""");
+        for (Empleado empl:empActivos){
+            if(empl instanceof EmpFijo){
+                System.out.println(empl);
+            }
+        }
+        System.out.println("""
+                    
+                    Empleados Dados de Baja
+                Nombre                  Sueldo""");
+        for (Empleado empl:empBaja){
+            System.out.println(empl.getNombre() + "                 " + String.format("%.2f",empl.sueldo())+"€");
+        }
+    }
+    public static void empTemporalesProvechosos(){
+        System.out.println("Empleado        Ventas totales");
+        for (Empleado empl:empActivos){
+            if(empl instanceof EmpTemporal && ((EmpTemporal) empl).getVentasTotales() > 10000){
+                System.out.println(empl.getNombre()+"     "+((EmpTemporal) empl).getVentasTotales()+"€");
             }
         }
     }
