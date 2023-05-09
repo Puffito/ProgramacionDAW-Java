@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="h2-1.4.200">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/Downloads/lib/h2-1.4.200.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/lib/derby.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/lib/hsqldb.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/lib/mysql-connector-java-8.0.15.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/lib/ojdbc8.jar!/" />
+      <root url="jar://$USER_HOME$/Downloads/lib/sqlite-jdbc-3.20.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
